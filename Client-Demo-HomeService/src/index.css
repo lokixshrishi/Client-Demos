@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 25% 97%;
+    --foreground: 220 20% 15%;
+
+    --card: 40 30% 99%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 40 30% 99%;
+    --popover-foreground: 220 20% 15%;
+
+    --primary: 150 35% 22%;
+    --primary-foreground: 40 30% 98%;
+
+    --secondary: 40 25% 94%;
+    --secondary-foreground: 150 35% 22%;
+
+    --muted: 40 20% 92%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 38 75% 55%;
+    --accent-foreground: 220 20% 12%;
+
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 40 30% 98%;
+
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 150 35% 22%;
+
+    --radius: 0;
+
+    /* Custom tokens */
+    --professional-blue: 210 50% 45%;
+    --accent-orange: 38 75% 55%;
+    --neutral-gray: 220 15% 45%;
+    --cream: 40 35% 96%;
+    --warm-shadow: 40 30% 70%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(150 35% 18%) 0%, hsl(150 40% 28%) 100%);
+    --gradient-professional: linear-gradient(180deg, hsl(40 25% 97%) 0%, hsl(40 30% 94%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(38 75% 55%) 0%, hsl(42 80% 60%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(var(--warm-shadow) / 0.15);
+    --shadow-card: 0 8px 30px -8px hsl(var(--warm-shadow) / 0.2);
+    --shadow-elevated: 0 20px 50px -12px hsl(var(--warm-shadow) / 0.25);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 40 30% 95%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 40 30% 95%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 40 30% 95%;
+
+    --primary: 150 35% 40%;
+    --primary-foreground: 220 20% 10%;
+
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 40 30% 95%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 40 20% 65%;
+
+    --accent: 38 75% 55%;
+    --accent-foreground: 220 20% 10%;
+
+    --destructive: 0 55% 50%;
+    --destructive-foreground: 40 30% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 150 35% 40%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-gradient-accent {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .bg-professional-gradient {
+    background: var(--gradient-professional);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+}

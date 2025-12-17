@@ -1,0 +1,33 @@
+/* Custom App Styles - Most styles defined in design system (index.css) */
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove default margins */
+#root {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  max-width: none;
+}
+
+/* Focus states for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid hsl(var(--gold));
+  outline-offset: 2px;
+}
+
+/* Image rendering */
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* Selection styling */
+::selection {
+  background-color: hsl(var(--gold) / 0.3);
+  color: hsl(var(--foreground));
+}

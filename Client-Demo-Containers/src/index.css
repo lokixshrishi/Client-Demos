@@ -1,0 +1,284 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Using system fonts for professional appearance */
+
+@layer base {
+  :root {
+    /* Primary Brand Colors */
+    --primary: 27 100% 50%; /* #FF7A00 */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 27 100% 40%; /* #CC5E00 */
+    
+    /* Background & Surface */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 16%; /* #2A2A2A */
+    
+    /* Neutrals */
+    --neutral-50: 0 0% 97%; /* #F7F7F7 */
+    --neutral-100: 0 0% 93%; /* #EDEDED */
+    --neutral-200: 0 0% 87%;
+    --neutral-300: 0 0% 75%;
+    --neutral-400: 0 0% 60%;
+    --neutral-500: 0 0% 30%; /* #4D4D4D */
+    --neutral-600: 0 0% 20%;
+    --neutral-700: 0 0% 16%; /* #2A2A2A */
+    
+    /* Card & Surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 16%;
+    --card-hover: 0 0% 98%;
+    
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 16%;
+    
+    /* Secondary */
+    --secondary: 0 0% 97%;
+    --secondary-foreground: 0 0% 16%;
+    
+    /* Muted */
+    --muted: 0 0% 97%;
+    --muted-foreground: 0 0% 30%;
+    
+    /* Accent */
+    --accent: 27 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Border & Input */
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 27 100% 50%;
+    
+    --radius: 0rem;
+    
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 16%;
+    --sidebar-primary: 27 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 97%;
+    --sidebar-accent-foreground: 0 0% 16%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 27 100% 50%;
+  }
+
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 27 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 27 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 27 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+
+  h1 {
+    @apply text-foreground;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  h2 {
+    @apply text-foreground;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 300;
+    line-height: 1.3;
+    letter-spacing: 0;
+  }
+
+  h3 {
+    @apply text-foreground;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+
+  h4, h5, h6 {
+    @apply text-foreground;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+
+  p {
+    @apply text-muted-foreground;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0;
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply max-w-7xl mx-auto px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-20 lg:py-28;
+  }
+
+  .heading-display {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+
+  .heading-section {
+    @apply text-3xl md:text-4xl;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 300;
+    line-height: 1.3;
+    letter-spacing: 0;
+  }
+
+  .heading-card {
+    @apply text-xl;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+
+  .body-large {
+    @apply text-lg text-muted-foreground;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0;
+  }
+
+  .body-base {
+    @apply text-base text-muted-foreground;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0;
+  }
+
+  .link-underline {
+    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 
+           after:h-[1px] after:bottom-0 after:left-0 after:bg-current after:origin-bottom-right 
+           after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .fade-in {
+    @apply animate-fade-in;
+  }
+
+  .slide-up {
+    @apply animate-slide-up;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out forwards;
+  }
+
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

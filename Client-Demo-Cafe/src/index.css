@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
+@layer base {
+  :root {
+    /* Warm cream background */
+    --background: 40 33% 97%;
+    --foreground: 30 10% 15%;
+
+    /* Card surfaces */
+    --card: 40 20% 95%;
+    --card-foreground: 30 10% 15%;
+
+    --popover: 40 33% 97%;
+    --popover-foreground: 30 10% 15%;
+
+    /* Coffee brown primary */
+    --primary: 25 30% 25%;
+    --primary-foreground: 40 33% 97%;
+
+    /* Warm stone secondary */
+    --secondary: 35 15% 90%;
+    --secondary-foreground: 30 10% 25%;
+
+    /* Muted tones */
+    --muted: 35 10% 88%;
+    --muted-foreground: 30 8% 45%;
+
+    /* Sage green accent */
+    --accent: 150 15% 40%;
+    --accent-foreground: 40 33% 97%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 40 33% 97%;
+
+    --border: 35 15% 85%;
+    --input: 35 15% 85%;
+    --ring: 25 30% 25%;
+
+    --radius: 0.25rem;
+
+    /* Custom cafe tokens */
+    --coffee-dark: 25 35% 18%;
+    --coffee-medium: 25 25% 35%;
+    --coffee-light: 30 20% 70%;
+    --cream: 40 33% 97%;
+    --cream-dark: 38 20% 92%;
+    --charcoal: 30 10% 15%;
+    --sage: 150 15% 40%;
+    --sage-light: 150 12% 85%;
+
+    /* Typography */
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'DM Sans', system-ui, sans-serif;
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -2px hsla(30, 10%, 15%, 0.06);
+    --shadow-medium: 0 8px 30px -4px hsla(30, 10%, 15%, 0.1);
+    --shadow-elevated: 0 20px 50px -10px hsla(30, 10%, 15%, 0.15);
+
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-fast: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+
+    --sidebar-background: 40 33% 97%;
+    --sidebar-foreground: 30 10% 25%;
+    --sidebar-primary: 25 30% 25%;
+    --sidebar-primary-foreground: 40 33% 97%;
+    --sidebar-accent: 35 15% 90%;
+    --sidebar-accent-foreground: 30 10% 25%;
+    --sidebar-border: 35 15% 85%;
+    --sidebar-ring: 25 30% 25%;
+  }
+
+  .dark {
+    --background: 30 15% 8%;
+    --foreground: 40 20% 92%;
+
+    --card: 30 12% 12%;
+    --card-foreground: 40 20% 92%;
+
+    --popover: 30 15% 8%;
+    --popover-foreground: 40 20% 92%;
+
+    --primary: 35 25% 75%;
+    --primary-foreground: 30 15% 8%;
+
+    --secondary: 30 10% 18%;
+    --secondary-foreground: 40 20% 92%;
+
+    --muted: 30 10% 20%;
+    --muted-foreground: 35 10% 60%;
+
+    --accent: 150 15% 50%;
+    --accent-foreground: 30 15% 8%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 40 20% 92%;
+
+    --border: 30 10% 20%;
+    --input: 30 10% 20%;
+    --ring: 35 25% 75%;
+
+    --coffee-dark: 35 20% 80%;
+    --coffee-medium: 30 15% 60%;
+    --coffee-light: 30 10% 40%;
+    --cream: 30 15% 8%;
+    --cream-dark: 30 12% 12%;
+    --charcoal: 40 20% 92%;
+    --sage: 150 15% 50%;
+    --sage-light: 150 10% 20%;
+
+    --sidebar-background: 30 15% 8%;
+    --sidebar-foreground: 40 20% 92%;
+    --sidebar-primary: 35 25% 75%;
+    --sidebar-primary-foreground: 30 15% 8%;
+    --sidebar-accent: 30 10% 18%;
+    --sidebar-accent-foreground: 40 20% 92%;
+    --sidebar-border: 30 10% 20%;
+    --sidebar-ring: 35 25% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .text-editorial-xl {
+    @apply text-5xl md:text-7xl lg:text-8xl font-serif font-medium tracking-tight leading-none;
+  }
+
+  .text-editorial-lg {
+    @apply text-4xl md:text-5xl lg:text-6xl font-serif font-medium tracking-tight leading-tight;
+  }
+
+  .text-editorial-md {
+    @apply text-2xl md:text-3xl lg:text-4xl font-serif font-normal leading-snug;
+  }
+
+  .text-body-lg {
+    @apply text-lg md:text-xl font-sans font-light leading-relaxed tracking-wide;
+  }
+
+  .text-body {
+    @apply text-base font-sans font-normal leading-relaxed;
+  }
+
+  .text-caption {
+    @apply text-sm font-sans font-medium uppercase tracking-widest;
+  }
+
+  .container-editorial {
+    @apply max-w-7xl mx-auto px-6 md:px-12 lg:px-20;
+  }
+
+  .section-spacing {
+    @apply py-20 md:py-32 lg:py-40;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-500 ease-out hover:-translate-y-1;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-500 ease-out hover:scale-[1.02];
+  }
+
+  .image-reveal {
+    @apply overflow-hidden;
+  }
+
+  .image-reveal img {
+    @apply transition-transform duration-700 ease-out hover:scale-105;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-fade-up-delay-1 {
+    animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-up-delay-2 {
+    animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-up-delay-3 {
+    animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .bg-gradient-warm {
+    background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--cream-dark)) 100%);
+  }
+
+  .border-subtle {
+    border-color: hsl(var(--border) / 0.5);
+  }
+}

@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
+@layer base {
+  :root {
+    /* Luxury Restaurant Color Palette */
+    --background: 40 30% 96%;
+    --foreground: 220 15% 15%;
+
+    --card: 40 25% 94%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 40 30% 96%;
+    --popover-foreground: 220 15% 15%;
+
+    /* Deep charcoal primary */
+    --primary: 220 15% 15%;
+    --primary-foreground: 40 30% 96%;
+
+    /* Soft beige secondary */
+    --secondary: 35 25% 90%;
+    --secondary-foreground: 220 15% 15%;
+
+    /* Muted warm tones */
+    --muted: 35 20% 88%;
+    --muted-foreground: 220 10% 40%;
+
+    /* Muted gold accent */
+    --accent: 42 65% 55%;
+    --accent-foreground: 220 15% 12%;
+
+    /* Forest green festive */
+    --festive-green: 150 40% 25%;
+    --festive-green-foreground: 40 30% 96%;
+
+    /* Soft burgundy */
+    --festive-burgundy: 350 45% 35%;
+    --festive-burgundy-foreground: 40 30% 96%;
+
+    /* Warm gold for highlights */
+    --gold: 42 65% 55%;
+    --gold-light: 42 50% 75%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 40 30% 96%;
+
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 42 65% 55%;
+
+    --radius: 0.25rem;
+
+    /* Sidebar - keeping for compatibility */
+    --sidebar-background: 40 30% 96%;
+    --sidebar-foreground: 220 15% 15%;
+    --sidebar-primary: 220 15% 15%;
+    --sidebar-primary-foreground: 40 30% 96%;
+    --sidebar-accent: 35 25% 90%;
+    --sidebar-accent-foreground: 220 15% 15%;
+    --sidebar-border: 35 20% 85%;
+    --sidebar-ring: 42 65% 55%;
+  }
+
+  .dark {
+    --background: 220 15% 10%;
+    --foreground: 40 20% 92%;
+
+    --card: 220 15% 12%;
+    --card-foreground: 40 20% 92%;
+
+    --popover: 220 15% 12%;
+    --popover-foreground: 40 20% 92%;
+
+    --primary: 40 20% 92%;
+    --primary-foreground: 220 15% 10%;
+
+    --secondary: 220 12% 18%;
+    --secondary-foreground: 40 20% 92%;
+
+    --muted: 220 12% 20%;
+    --muted-foreground: 40 15% 65%;
+
+    --accent: 42 65% 55%;
+    --accent-foreground: 220 15% 10%;
+
+    --festive-green: 150 35% 35%;
+    --festive-green-foreground: 40 30% 96%;
+
+    --festive-burgundy: 350 40% 45%;
+    --festive-burgundy-foreground: 40 30% 96%;
+
+    --gold: 42 60% 60%;
+    --gold-light: 42 45% 70%;
+
+    --border: 220 12% 22%;
+    --input: 220 12% 22%;
+    --ring: 42 65% 55%;
+
+    --sidebar-background: 220 15% 10%;
+    --sidebar-foreground: 40 20% 92%;
+    --sidebar-primary: 42 65% 55%;
+    --sidebar-primary-foreground: 220 15% 10%;
+    --sidebar-accent: 220 12% 18%;
+    --sidebar-accent-foreground: 40 20% 92%;
+    --sidebar-border: 220 12% 22%;
+    --sidebar-ring: 42 65% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .text-gold-gradient {
+    background: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 50%, hsl(var(--gold)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-gold-gradient {
+    border-image: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 50%, hsl(var(--gold)) 100%) 1;
+  }
+
+  .festive-divider {
+    @apply w-24 h-px mx-auto;
+    background: linear-gradient(90deg, transparent, hsl(var(--gold)), transparent);
+  }
+
+  .festive-ornament {
+    @apply inline-block text-gold mx-2;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+  .delay-600 { animation-delay: 600ms; }
+}

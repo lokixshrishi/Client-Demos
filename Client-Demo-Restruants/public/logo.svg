@@ -1,0 +1,30 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="#2C1810" stroke="#D4AF37" stroke-width="2"/>
+  
+  <!-- Restaurant icon - Chef's hat and utensils -->
+  <g transform="translate(16, 12)">
+    <!-- Chef's hat -->
+    <path d="M16 8C18.5 8 20.5 10 20.5 12.5V16C20.5 18.5 18.5 20.5 16 20.5C13.5 20.5 11.5 18.5 11.5 16V12.5C11.5 10 13.5 8 16 8Z" fill="#F8F8F8"/>
+    <ellipse cx="16" cy="20.5" rx="6" ry="2" fill="#E8E8E8"/>
+    
+    <!-- Fork -->
+    <g transform="translate(6, 24)">
+      <rect x="1" y="0" width="1" height="16" fill="#D4AF37"/>
+      <rect x="0" y="0" width="1" height="6" fill="#D4AF37"/>
+      <rect x="2" y="0" width="1" height="6" fill="#D4AF37"/>
+    </g>
+    
+    <!-- Knife -->
+    <g transform="translate(25, 24)">
+      <rect x="0" y="0" width="1" height="16" fill="#D4AF37"/>
+      <path d="M-1 0L2 0L1 4L0 4Z" fill="#D4AF37"/>
+    </g>
+  </g>
+  
+  <!-- Decorative elements -->
+  <circle cx="12" cy="20" r="1.5" fill="#D4AF37" opacity="0.6"/>
+  <circle cx="52" cy="44" r="1.5" fill="#D4AF37" opacity="0.6"/>
+  <circle cx="20" cy="52" r="1" fill="#D4AF37" opacity="0.4"/>
+  <circle cx="44" cy="12" r="1" fill="#D4AF37" opacity="0.4"/>
+</svg>
