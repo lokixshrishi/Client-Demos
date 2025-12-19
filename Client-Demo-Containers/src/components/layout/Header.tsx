@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/logo.png";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -28,16 +27,11 @@ export function Header() {
       <nav className="container-wide">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <img 
-              src={logo} 
-              alt="Karnataka Portable Cabins Logo" 
-              className="h-12 w-auto object-contain"
-            />
+          <Link to="/" className="flex items-center">
             <span className={cn(
-              "text-lg font-semibold tracking-tight",
+              "text-xl font-bold tracking-tight",
               isHomePage ? "text-white" : "text-foreground"
-            )}>Karnataka Portable Cabins</span>
+            )}>Portable Containers</span>
           </Link>
 
           {/* Desktop Navigation */}

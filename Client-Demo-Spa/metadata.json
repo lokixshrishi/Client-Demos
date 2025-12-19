@@ -1,0 +1,7 @@
+{
+  "name": "Ethereal Aura Spa & Makeup",
+  "description": "A high-end, professional SPA and makeup artist portfolio and booking platform featuring AI-powered beauty consultations.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

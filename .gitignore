@@ -1,19 +1,19 @@
 # Kiro
-.kiro/
+**/.kiro/
 
 # Dependencies
-node_modules/
+**/node_modules/
 
 # Build outputs
-dist/
-build/
+**/dist/
+**/build/
 
-# Lock files (optional - remove if you want to track them)
-*.lockb
+# Lock files (optional)
+**/*.lockb
 
 # IDE
-.vscode/
-.idea/
+**/.vscode/
+**/.idea/
 
 # OS files
 .DS_Store
@@ -24,10 +24,13 @@ Thumbs.db
 npm-debug.log*
 
 # Environment files
-.env
-.env.local
-.env.*.local
+**/.env
+**/.env.local
+**/.env.*.local
 
 # Video files (large)
 *.mov
 *.mp4
+
+# Vite cache
+**/.vite/
