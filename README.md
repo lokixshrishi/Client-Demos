@@ -4,18 +4,18 @@ A collection of demo websites built with React, TypeScript, Vite, and Tailwind C
 
 ## Projects
 
-| Project | Description |
-|---------|-------------|
-| **Client-Demo-Cafe** | Coffee shop / cafe website |
-| **Client-Demo-CAFirms** | Chartered Accountant firm website |
-| **Client-Demo-Clinics** | Medical clinic website |
-| **Client-Demo-Containers** | Container cabin / portable building services |
-| **Client-Demo-Gym** | Fitness / gym website |
-| **Client-Demo-HomeService** | Home services / maintenance company |
-| **Client-Demo-RealEstate** | Real estate listings website |
-| **Client-Demo-Restruants** | Restaurant website |
-| **Client-Demo-Spa** | Spa / wellness website |
-| **Client-Demo-SuperStore** | Supermarket / retail store website |
+| Project | Description | Live Demo |
+|---------|-------------|-----------|
+| **Client-Demo-Cafe** | Coffee shop / cafe website | [View](https://cafe-taupe-xi.vercel.app) |
+| **Client-Demo-CAFirms** | Chartered Accountant firm website | [View](https://ca-firm-sage.vercel.app) |
+| **Client-Demo-Clinics** | Medical clinic website | [View](https://clinic-xi-eosin.vercel.app) |
+| **Client-Demo-Containers** | Container cabin / portable building services | [View](https://portable-cabins-client.vercel.app) |
+| **Client-Demo-Gym** | Fitness / gym website | [View](https://gym-phi-tan.vercel.app) |
+| **Client-Demo-HomeService** | Home services / maintenance company | [View](https://service-six-umber.vercel.app) |
+| **Client-Demo-RealEstate** | Real estate listings website | [View](https://real-estate-client-3.vercel.app) |
+| **Client-Demo-Restruants** | Restaurant website | [View](https://restruants-nine.vercel.app) |
+| **Client-Demo-Spa** | Spa / wellness website | [View](https://spa-vert.vercel.app) |
+| **Client-Demo-SuperStore** | Supermarket / retail store website | [View](https://superstore-fawn.vercel.app) |
 
 ## Tech Stack
 
